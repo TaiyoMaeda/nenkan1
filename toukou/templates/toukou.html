@@ -1,0 +1,11 @@
+{% extends 'base.html'%}
+{% block logg %}
+    <form action="touroku" method="POST">
+        {% csrf_token %}
+        <p>件名：<input type="text" name="title"></p>
+        <p>内容：<input type="text" name="memo"></p>
+        <input type="submit" value="投稿する">
+    </form>
+
+
+{% endblock %}

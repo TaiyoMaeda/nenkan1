@@ -1,0 +1,16 @@
+<div class="container">
+    {% for post in object_list %}
+    <div class="post">
+      <p>件名：{{ post.title }}</p>
+      <p>内容：{{ post.memo }}</p>
+      <p>--------------------</p>
+    </div>
+    {% endfor %}
+    <div class="form">
+
+    </div>
+  </div>
+  <a href="{% url 'toukou:form' %}">追加投稿</a>
+  <br>
+  <a href="{% url 'app:index' %}">HOME</a>
+</br>
